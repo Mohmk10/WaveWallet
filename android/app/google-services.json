@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104917351921",
+    "project_id": "wave-wallet-8d668",
+    "storage_bucket": "wave-wallet-8d668.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104917351921:android:de6cc50e1dc7bc0cd09850",
+        "android_client_info": {
+          "package_name": "com.sonatel.wave_wallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVrOPwpMAlhi7WEZp1pf2e_mPZfIYd25k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
