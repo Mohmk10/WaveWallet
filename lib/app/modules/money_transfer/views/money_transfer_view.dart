@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/money_transfer_controller.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+class MoneyTransferView extends GetView<MoneyTransferController> {
+  const MoneyTransferView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('MoneyTransferView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'WaveWallet',
+          'MoneyTransferView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

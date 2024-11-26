@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/sign_up_controller.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+class SignUpView extends GetView<SignUpController> {
+  const SignUpView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('SignUpView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'WaveWallet',
+          'SignUpView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

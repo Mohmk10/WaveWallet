@@ -1,0 +1,159 @@
+lib
+├── app
+│   ├── modules
+│   │   ├── bill_payment
+│   │   │   ├── controllers
+│   │   │   │   └── bill_payment_controller.dart
+│   │   │   └── views
+│   │   │       └── bill_payment_view.dart
+│   │   ├── customer_support
+│   │   │   ├── controllers
+│   │   │   │   └── customer_support_controller.dart
+│   │   │   └── views
+│   │   │       └── customer_support_view.dart
+│   │   ├── dashboard
+│   │   ├── home
+│   │   │   ├── controllers
+│   │   │   │   └── home_controller.dart
+│   │   │   └── views
+│   │   │       └── home_view.dart
+│   │   ├── login
+│   │   │   ├── controllers
+│   │   │   │   └── login_controller.dart
+│   │   │   └── views
+│   │   │       └── login_view.dart
+│   │   ├── money_transfer
+│   │   │   ├── controllers
+│   │   │   │   └── money_transfer_controller.dart
+│   │   │   └── views
+│   │   │       └── money_transfer_view.dart
+│   │   ├── settings
+│   │   │   ├── controllers
+│   │   │   │   └── settings_controller.dart
+│   │   │   └── views
+│   │   │       └── settings_view.dart
+│   │   ├── sign_up
+│   │   │   ├── controllers
+│   │   │   │   └── sign_up_controller.dart
+│   │   │   └── views
+│   │   │       └── sign_up_view.dart
+│   │   ├── transaction_history
+│   │   └── user_profile
+│   │       ├── controllers
+│   │       │   └── user_profile_controller.dart
+│   │       └── views
+│   │           └── user_profile_view.dart
+│   ├── routes
+│   │   └── app_routes.dart
+│   └── widgets
+│       └── custom_widgets.dart
+├── models
+│   ├── bill_payment_model.dart
+│   ├── customer_support_model.dart
+│   ├── dashboard_model.dart
+│   ├── home_model.dart
+│   ├── login_model.dart
+│   ├── money_transfer_model.dart
+│   ├── settings_model.dart
+│   ├── sign_up_model.dart
+│   ├── transaction_history_model.dart
+│   └── user_profile_model.dart
+├── services
+│   ├── bill_payment_service.dart
+│   ├── customer_support_service.dart
+│   ├── dashboard_service.dart
+│   ├── home_service.dart
+│   ├── login_service.dart
+│   ├── money_transfer_service.dart
+│   ├── settings_service.dart
+│   ├── sign_up_service.dart
+│   ├── transaction_history_service.dart
+│   └── user_profile_service.dart
+└── utils
+    ├── constants.dart
+    ├── helpers.dart
+    └── strings.dartimport 'package:flutter/material.dart';
+    import 'package:get/get.dart';
+    
+    class HomeView extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Wave'),
+            backgroundColor: Colors.blue,
+            elevation: 0,
+          ),
+          body: Container(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Bonjour,',
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                    CircleAvatar(
+                      radius: 24,
+                      backgroundImage: NetworkImage('https://via.placeholder.com/100'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Solde disponible',
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          '12 000 XOF',
+                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        Icon(Icons.payment, size: 40),
+                        SizedBox(height: 8),
+                        Text('Payer'),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.transfer_within_a_station, size: 40),
+                        SizedBox(height: 8),
+                        Text('Transférer'),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.receipt, size: 40),
+                        SizedBox(height: 8),
+                        Text('Factures'),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+    }
